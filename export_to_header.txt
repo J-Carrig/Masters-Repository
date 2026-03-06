@@ -1,0 +1,39 @@
+sol = explicitMPC.PiecewiseAffineSolution;
+
+nRegions = numel(sol);
+
+F = cell(nRegions,1);
+G = cell(nRegions,1);
+H = cell(nRegions,1);
+K = cell(nRegions,1);
+
+for i = 1:nRegions
+    F{i} = sol(i).F;   % 1x2 or 1x1 depending on params
+    G{i} = sol(i).G;   % scalar
+    H{i} = sol(i).H;   % nx2 or nx1
+    K{i} = sol(i).K;   % nx1
+end
+
+fid = fopen('mpc_data.h','w');
+
+fprintf(fid, '#define N_REGIONS %d\n\n', nRegions);
+
+fprintf(fid, 'static const float F[N_REGIONS] = {');
+fprintf(fid, '%f, ', F{:});
+fprintf(fid, '};\n\n');
+
+fprintf(fid, 'static const float G[N_REGIONS] = {');
+fprintf(fid, '%f, ', G{:});
+fprintf(fid, '};\n\n');
+
+for i = 1:nRegions
+    fprintf(fid, 'static const float H_%d[] = {', i);
+    fprintf(fid, '%f, ', H{i});
+    fprintf(fid, '};\n');
+
+    fprintf(fid, 'static const float K_%d[] = {', i);
+    fprintf(fid, '%f, ', K{i});
+    fprintf(fid, '};\n\n');
+end
+
+fclose(fid);
