@@ -1,13 +1,15 @@
-# Josh's Masters Thesis Files
-thesea re ill the filesthat I am using for my masters thesis.
+# An Investigative Comparison of Control Loop Algorithms for a CommerciallyAvailable Low-Cost Stepper Motor - File Repository
 ## Directories
-### Pictures
-contains all the pictures saved from simulations
+below is a description of the contents of the directories in this repository.
+Note that several files are not in directories as they do o fit into any specific directory.
 ### Digital Twin
-Contains the SIMULINK files for the digital twin (both PID and MPC versions)
-### HIL
-Contains the SIMULINK models and ESP32 code for HIL
+All Simulink files, CSV files, and MATLAB scripts used for Digital Twin Simulation.
 ### Explicit MPC
-Contains all the MATLAB files needed for generating the Explicit MPC header files.
-
+All MATLAB scripts used to generate the explicit MPC soltuion.
+### HIL
+All SImulink, Arduino, CSV, and MATLAB scripts used for Hardware-In-the-Loop testing.
+### Hardware
+All Arduino, CSV, and MATLAB scripts used for Full Hardware Testing.
+### Pictures
+Graphs, SIMULINK block diagrams, and physical photographs.
 
