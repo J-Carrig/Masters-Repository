@@ -1,0 +1,63 @@
+==========================================
+RESULTS FOR: HW_PID_1010.csv
+Target Distance: 1010.0 mm
+------------------------------------------
+Rise Time (10-90%):  1.6903 seconds
+Settling Time (0.5%):  3.0503 seconds
+Steady State Error:  0.0530 mm
+Total Control Effort: 580.68 (PWM*s)
+==========================================
+
+=========================================
+RESULTS FOR: HW_MPC_1010.csv
+Target Distance: 1010.0 mm
+------------------------------------------
+Rise Time (10-90%):  2.1000 seconds
+Settling Time (0.5%):  3.3904 seconds
+Steady State Error:  1.7690 mm
+Total Control Effort: 555.48 (PWM*s)
+==========================================
+
+
+
+==========================================
+RESULTS FOR: HW_PID_11.csv
+Target Distance: 11.0 mm
+------------------------------------------
+Rise Time (10-90%):  0.1303 seconds
+Settling Time (0.5%):  Inf seconds
+Steady State Error:  0.4500 mm
+Total Control Effort: 72.21 (PWM*s)
+==========================================
+
+==========================================
+RESULTS FOR: HW_MPC_11.csv
+Target Distance: 11.0 mm
+------------------------------------------
+Rise Time (10-90%):  0.2197 seconds
+Settling Time (0.5%):  Inf seconds
+Steady State Error:  0.1900 mm
+Total Control Effort: 13.75 (PWM*s)
+==========================================
+
+
+
+==========================================
+RESULTS FOR: HW_PID_510.csv
+Target Distance: 510.0 mm
+------------------------------------------
+Rise Time (10-90%):  0.9903 seconds
+Settling Time (0.5%):  1.9499 seconds
+Steady State Error:  0.0480 mm
+Total Control Effort: 339.67 (PWM*s)
+==========================================
+
+==========================================
+RESULTS FOR: HW_MPC_510.csv
+Target Distance: 510.0 mm
+------------------------------------------
+Rise Time (10-90%):  1.6701 seconds
+Settling Time (0.5%):  2.5275 seconds
+Steady State Error:  0.2120 mm
+Total Control Effort: 272.40 (PWM*s)
+==========================================

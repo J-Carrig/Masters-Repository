@@ -1,0 +1,66 @@
+==========================================
+RESULTS FOR: PID_results_1010.csv
+Target Distance: 1010.0 mm
+------------------------------------------
+Rise Time (10-90%):  2.4800 seconds
+Settling Time (0.5%):  4.0700 seconds
+Steady State Error:  0.4520 mm
+Total Control Effort: 785.83 (PWM*s)
+==========================================
+
+==========================================
+RESULTS FOR: MPC_results_1010.csv
+Target Distance: 1010.0 mm
+------------------------------------------
+Rise Time (10-90%):  2.4600 seconds
+Settling Time (0.5%):  4.2600 seconds
+Steady State Error:  0.4164 mm
+Total Control Effort: 785.84 (PWM*s)
+==========================================
+
+
+
+
+==========================================
+RESULTS FOR: PID_results_11.csv
+Target Distance: 11.0 mm
+------------------------------------------
+Rise Time (10-90%):  0.9000 seconds
+Settling Time (0.5%):  2.1700 seconds
+Steady State Error:  0.0004 mm
+Total Control Effort: 8.56 (PWM*s)
+==========================================
+
+==========================================
+RESULTS FOR: MPC_results_11.csv
+Target Distance: 11.0 mm
+------------------------------------------
+Rise Time (10-90%):  1.1300 seconds
+Settling Time (0.5%):  2.7800 seconds
+Steady State Error:  0.0042 mm
+Total Control Effort: 8.56 (PWM*s)
+==========================================
+
+
+
+
+==========================================
+RESULTS FOR: PID_results_510.csv
+Target Distance: 510.0 mm
+------------------------------------------
+Rise Time (10-90%):  1.3900 seconds
+Settling Time (0.5%):  2.8400 seconds
+Steady State Error:  0.1030 mm
+Total Control Effort: 396.71 (PWM*s)
+==========================================
+
+==========================================
+RESULTS FOR: MPC_results_510.csv
+Target Distance: 510.0 mm
+------------------------------------------
+Rise Time (10-90%):  1.3700 seconds
+Settling Time (0.5%):  3.1500 seconds
+Steady State Error:  0.2891 mm
+Total Control Effort: 396.87 (PWM*s)
+==========================================
+
