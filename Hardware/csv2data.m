@@ -2,8 +2,8 @@
 clear; clc; close all;
 
 % --- MANUAL CONFIGURATION ---
-filename = 'HW_MPC_510.csv';  % <--- Change this for each run
-target_dist = 510;             % <--- Change this to match (11, 510, or 1010)
+filename = 'HW_MPC_1010.csv';  % <--- Change this for each run
+target_dist = 1010;             % <--- Change this to match (11, 510, or 1010)
 % -----------------------------
 
 if ~isfile(filename)
@@ -16,6 +16,7 @@ t = data.Timestamp;
 pwm = data.PWM;
 dist = data.Distance_mm;
 signal = data.Signal_995;
+
 dt = mean(diff(t)); 
 
 % Calculate Performance Metrics
@@ -31,6 +32,7 @@ end
 % Settling Time (Within 0.5% of Target and stays there)
 tolerance = 0.005 * target_dist;
 idx_outside = find(abs(dist - target_dist) > tolerance, 1, 'last');
+
 if isempty(idx_outside)
     settling_time = t(1); 
 elseif idx_outside == length(t)
@@ -61,20 +63,25 @@ fprintf('==========================================\n');
 figure('Color', 'w', 'Name', ['Analysis: ', filename]);
 hold on; grid on;
 
+% Get current axes and increase the base font size for the tick marks
+ax = gca;
+ax.FontSize = 13; % <--- Increases numbers on the X and Y axes
+
 % Left Y-Axis: Distance
 yyaxis left
 plot(t, dist, 'b-', 'LineWidth', 2.5, 'DisplayName', 'Measured Distance');
 yline(target_dist, 'r--', 'Target', 'LineWidth', 1.5, 'HandleVisibility', 'off');
-ylabel('Distance (mm)');
+% Increased font size and made bold for readability
+ylabel('Distance (mm)', 'FontSize', 14, 'FontWeight', 'bold');
 ylim([0, target_dist * 1.15]); 
 
 % Right Y-Axis: PWM
 yyaxis right
 stairs(t, pwm, 'Color', [0, 0.5, 0, 0.4], 'LineWidth', 1.2, 'DisplayName', 'PWM');
-ylabel('PWM (0-255)');
+% Increased font size and made bold
+ylabel('PWM (0-255)', 'FontSize', 14, 'FontWeight', 'bold');
 ylim([0, 260]);
-ax = gca;
-ax.YColor = [0, 0.5, 0];
+ax.YColor = [0, 0.5, 0]; % Needs to stay below the ax variable declaration
 
 % Annotate Settling Point if valid
 if ~isinf(settling_time)
@@ -82,8 +89,9 @@ if ~isinf(settling_time)
     plot(settling_time, final_val, 'kx', 'MarkerSize', 10, 'LineWidth', 2, 'DisplayName', 'Settled');
 end
 
-xlabel('Time (seconds)');
-title('Full Hardware MPC Performance Analysis: 11mm Distance');
-legend('Location', 'southeast');
+% Increased font size for X label, Title, and Legend
+xlabel('Time (seconds)', 'FontSize', 14, 'FontWeight', 'bold');
+title('Full Hardware MPC Performance Analysis: 1010mm Distance', 'FontSize', 16, 'FontWeight', 'bold');
+legend('Location', 'southeast', 'FontSize', 13);
+
 hold off;
-drawnow;
