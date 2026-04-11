@@ -2,6 +2,8 @@
 ## Directories
 below is a description of the contents of the directories in this repository.
 Note that several files are not in directories as they do o fit into any specific directory.
+### CAD Files
+.step and .stl versions of all parts used for hardware testing.
 ### Digital Twin
 All Simulink files, CSV files, and MATLAB scripts used for Digital Twin Simulation.
 ### Explicit MPC
